@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{889C3F4B-8668-4D6A-B679-A64CFB3156DF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>yazlab1tarifrehberiprojesi</RootNamespace>
+    <AssemblyName>yazlab1tarifrehberiprojesi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FuzzySharp, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FuzzySharp.2.0.2\lib\net461\FuzzySharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArtanPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Databasekodu.cs" />
+    <Compile Include="Database\TarifRehberiDatabase.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MalzemeGuncelle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\MalzemeGuncelle.Designer.cs">
+      <DependentUpon>MalzemeGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Message.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Message.Designer.cs">
+      <DependentUpon>Message.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IMalzemelerRepository.cs" />
+    <Compile Include="Models\ITariflerRepository.cs" />
+    <Compile Include="Models\ITarifMalzemeIliskiRepository.cs" />
+    <Compile Include="Models\MalzemelerModeli.cs" />
+    <Compile Include="Models\MalzemelerRepository.cs" />
+    <Compile Include="Models\TariflerModeli.cs" />
+    <Compile Include="Models\TariflerRepository.cs" />
+    <Compile Include="Models\TarifMalzemeIliskiRepository.cs" />
+    <Compile Include="Models\TarifMalzemeIliskisiModeli.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TarifGuncelle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\TarifGuncelle.Designer.cs">
+      <DependentUpon>TarifGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tarifrehberidatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tarifrehberidatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AnaSayfa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AnaSayfa.Designer.cs">
+      <DependentUpon>AnaSayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Malzemeler.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Malzemeler.Designer.cs">
+      <DependentUpon>Malzemeler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MalzemelerEkleSil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\MalzemelerEkleSil.Designer.cs">
+      <DependentUpon>MalzemelerEkleSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StokDurumu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\StokDurumu.Designer.cs">
+      <DependentUpon>StokDurumu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TarifDetay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\TarifDetay.Designer.cs">
+      <DependentUpon>TarifDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TarifEkle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\TarifEkle.Designer.cs">
+      <DependentUpon>TarifEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tarifler.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Tarifler.Designer.cs">
+      <DependentUpon>Tarifler.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MalzemeGuncelle.resx">
+      <DependentUpon>MalzemeGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Message.resx">
+      <DependentUpon>Message.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TarifGuncelle.resx">
+      <DependentUpon>TarifGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AnaSayfa.resx">
+      <DependentUpon>AnaSayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Malzemeler.resx">
+      <DependentUpon>Malzemeler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MalzemelerEkleSil.resx">
+      <DependentUpon>MalzemelerEkleSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StokDurumu.resx">
+      <DependentUpon>StokDurumu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TarifDetay.resx">
+      <DependentUpon>TarifDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TarifEkle.resx">
+      <DependentUpon>TarifEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Tarifler.resx">
+      <DependentUpon>Tarifler.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="tarifrehberidatabaseDataSet.xsc">
+      <DependentUpon>tarifrehberidatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="tarifrehberidatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tarifrehberidatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tarifrehberidatabaseDataSet.xss">
+      <DependentUpon>tarifrehberidatabaseDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Images\Icons\anayemek.png" />
+    <Content Include="Images\Icons\checked.png" />
+    <Content Include="Images\Icons\guncelle.png" />
+    <Content Include="Images\Tarifler\ayranasicorbasi.png" />
+    <Content Include="Images\Tarifler\brownie.png" />
+    <Content Include="Images\Tarifler\bruschetta.png" />
+    <Content Include="Images\Tarifler\catlakkurabiye.png" />
+    <Content Include="Images\Tarifler\cevizlirokasalatasi.png" />
+    <Content Include="Images\Tarifler\cobansalatasi.png" />
+    <Content Include="Images\Tarifler\dolma.png" />
+    <Content Include="Images\Tarifler\domatescorbasi.png" />
+    <Content Include="Images\Tarifler\duguncorbasi.png" />
+    <Content Include="Images\Tarifler\ezogelincorbasi.png" />
+    <Content Include="Images\Tarifler\firindakoftepatates.png" />
+    <Content Include="Images\Tarifler\firindasutlac.png" />
+    <Content Include="Images\Tarifler\firindatavuk.png" />
+    <Content Include="Images\Tarifler\gavurdagsalatasi.png" />
+    <Content Include="Images\Tarifler\karniyarik.png" />
+    <Content Include="Images\Tarifler\kavurmalipilav.png" />
+    <Content Include="Images\Tarifler\kazandibi.png" />
+    <Content Include="Images\Tarifler\kisir.png" />
+    <Content Include="Images\Tarifler\kremalimantarcorbasi.png" />
+    <Content Include="Images\Tarifler\kremkaramel.png" />
+    <Content Include="Images\Tarifler\kurudomateslipeynirtoplari.png" />
+    <Content Include="Images\Tarifler\kurufasulyepilav.png" />
+    <Content Include="Images\Tarifler\lahmacun.jpg" />
+    <Content Include="Images\Tarifler\lahmacun.png" />
+    <Content Include="Images\Tarifler\magnolya.png" />
+    <Content Include="Images\Tarifler\makarnasalatasi.png" />
+    <Content Include="Images\Tarifler\mercimekcorbasi.png" />
+    <Content Include="Images\Tarifler\mercimekkoftesi.png" />
+    <Content Include="Images\Tarifler\mevsimsalatasi.png" />
+    <Content Include="Images\Tarifler\morlahanasalatasi.png" />
+    <Content Include="Images\Tarifler\mucver.png" />
+    <Content Include="Images\Tarifler\pacangaboregi.png" />
+    <Content Include="Images\Tarifler\patateskroket.png" />
+    <Content Include="Images\Tarifler\patatessalatasi.png" />
+    <Content Include="Images\Tarifler\pizza.png" />
+    <Content Include="Images\Tarifler\revani.png" />
+    <Content Include="Images\Tarifler\russalatasi.png" />
+    <Content Include="Images\Tarifler\sebzecorbasi.png" />
+    <Content Include="Images\Tarifler\sekerpare.png" />
+    <Content Include="Images\Tarifler\sigaraboregi.png" />
+    <Content Include="Images\Tarifler\sulukofte.png" />
+    <Content Include="Images\Tarifler\tabulesalatasi.png" />
+    <Content Include="Images\Tarifler\tarhanacorbasi.png" />
+    <Content Include="Images\Tarifler\tavukgogsu.png" />
+    <Content Include="Images\Tarifler\tavuksote.png" />
+    <Content Include="Images\Tarifler\tepsikebabi.png" />
+    <Content Include="Images\Tarifler\terbiyelitavukcorbasi.png" />
+    <Content Include="Images\Tarifler\tiramisu.png" />
+    <Content Include="Images\Tarifler\turlu.jpg" />
+    <Content Include="Images\Tarifler\turlu.png" />
+    <Content Include="Images\Tarifler\yaglama.png" />
+    <Content Include="Images\Tarifler\yalanciprofiterol.png" />
+    <Content Include="Images\Tarifler\yaylacorbasi.png" />
+    <Content Include="Images\Tarifler\yogurtlukabaksalatasi.png" />
+    <None Include="Images\Icons\malzemeGuncelle.png" />
+    <None Include="Images\Icons\ok.png" />
+    <Content Include="Images\Icons\karisikkategori.png" />
+    <Content Include="Images\Icons\karisikKategori1.png" />
+    <Content Include="Images\Icons\sil.png" />
+    <None Include="Images\Icons\tarifguncelle.png" />
+    <None Include="Images\Icons\temizle.png" />
+    <Content Include="Images\Pictures\malzemelist.png" />
+    <Content Include="Images\Pictures\stok.png" />
+    <Content Include="Images\Icons\search.png" />
+    <None Include="Images\Icons\arama1.png" />
+    <None Include="Images\Icons\arama.png" />
+    <Content Include="Images\Icons\atistirmaliklar.png" />
+    <Content Include="Images\Icons\corbalar.png" />
+    <Content Include="Images\Icons\delete.png" />
+    <Content Include="Images\Icons\anasayfa.png" />
+    <Content Include="Images\Icons\malzemeekle.png" />
+    <Content Include="Images\Icons\malzemesil.png" />
+    <Content Include="Images\Icons\salatalar.png" />
+    <Content Include="Images\Icons\stok.png" />
+    <Content Include="Images\Icons\tarifarama.png" />
+    <Content Include="Images\Icons\tarifekle.png" />
+    <None Include="Images\Icons\tarifimageekle.png" />
+    <Content Include="Images\Icons\tatlilar.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\logo2.png" />
+    <Content Include="Images\Pictures\malzemeekle.png" />
+    <Content Include="Images\Pictures\tarifekle.png" />
+    <Content Include="Images\Pictures\tarifekle1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
